@@ -14,11 +14,11 @@ const images = [
 ];
  
 const addFotoRow = foto => {
-  return `
-  <li class="item__task3" >
-  <img class="img__task3" src="${foto.url}" alt="${foto.alt}"  />
-  </li> `
+ return `
+ <li class="item__task3" >
+ <img class="img__task3" src="${foto.url}" alt="${foto.alt}"  />
+ </li> `
 }
-const galaryListEL = document.querySelector(`.gallery`)
+const galaryListEL = document.querySelector(`.gallery`);
 const makeGalaryFoto = images.map(addFotoRow).join('');
 galaryListEL.insertAdjacentHTML("afterbegin", makeGalaryFoto)
