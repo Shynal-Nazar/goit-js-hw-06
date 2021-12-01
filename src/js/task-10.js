@@ -1,13 +1,13 @@
 const refEl = {
-    inputEl: document.querySelector("input"),
-    btnCreate: document.querySelector('[data-create]'),
-    btndestroy: document.querySelector('[data-destroy]'),
-    boxesEl: document.querySelector("#boxes"), 
+  inputEl: document.querySelector("input"),
+  btnCreate: document.querySelector("[data-create]"),
+  btndestroy: document.querySelector("[data-destroy]"),
+  boxesEl: document.querySelector("#boxes"),
 };
 
 const createBoxes = (amount) => {
- amount = refEl.inputEl.value;
-  
+  amount = refEl.inputEl.value;
+
   for (let i = 0; i < amount; i += 1) {
     const newDiv = document.createElement("div");
     newDiv.style.backgroundColor = getRandomHexColor();
@@ -15,13 +15,13 @@ const createBoxes = (amount) => {
     let sizeBox = 30 + i * 10;
     newDiv.style.width = `${sizeBox}px`;
     newDiv.style.height = `${sizeBox}px`;
-    refEl.boxesEl.append(newDiv)
+    refEl.boxesEl.append(newDiv);
   }
 };
 
 const destroyBoxes = () => {
-  refEl.boxesEl.innerHTML = '';
-  refEl.inputEl.value = ''
+  refEl.boxesEl.innerHTML = "";
+  refEl.inputEl.value = "";
 };
 
 refEl.btnCreate.addEventListener("click", createBoxes);
