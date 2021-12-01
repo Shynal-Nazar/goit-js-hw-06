@@ -3,7 +3,6 @@ const body = document.querySelector(".widget");
 const nameColor = document.querySelector(".color");
 
 btnChange.addEventListener("click", () => {
-  console.log("Button was clicked");
   body.style.backgroundColor = getRandomHexColor();
 
   nameColor.textContent=getRandomHexColor()
