@@ -15,5 +15,4 @@ const newitemEl = ingredients.map((item) => {
   newItem.textContent = item;
   return newItem;
 });
-
 list.append(...newitemEl);
