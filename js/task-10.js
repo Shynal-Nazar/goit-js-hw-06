@@ -8,13 +8,16 @@ const refEl = {
 const createBoxes = (amount) => {
   amount = refEl.inputEl.value;
 
+  const elementsInBoxes = refEl.boxesEl.children.length;
+
   for (let i = 0; i < amount; i += 1) {
     const newDiv = document.createElement("div");
     newDiv.style.backgroundColor = getRandomHexColor();
-
-    let sizeBox = 30 + i * 10;
+    let beforesizebox = 30 + elementsInBoxes * 10;
+    let sizeBox = beforesizebox + i * 10;
     newDiv.style.width = `${sizeBox}px`;
     newDiv.style.height = `${sizeBox}px`;
+
     refEl.boxesEl.append(newDiv);
   }
 };
